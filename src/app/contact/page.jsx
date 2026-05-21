@@ -1,6 +1,6 @@
 "use client";
 
-import emailjs from "emailjs-com";
+import emailjs from "emailjs/browser";
 import { useRef, useState, useEffect } from "react";
 import { FaInstagram } from "react-icons/fa6";
 import { IoLogoWhatsapp } from "react-icons/io5";
@@ -219,10 +219,12 @@ export default function ContactPage() {
               </a>
 
               <a
-                href="https://github.com/ItsVikasA"
-                className="text-2xl hover:text-black dark:hover:text-white hover:scale-110 transition-all duration-300"
+               href="https://github.com/ItsVikasA"
+               target="_blank"
+               rel="noopener noreferrer"
+                className="text-2xl hover:text-foreground hover:scale-110 transition-all duration-300"
               >
-                <FaGithub />
+              <FaGithub />
               </a>
 
               <a
@@ -238,6 +240,14 @@ export default function ContactPage() {
               >
                 <FaYoutube />
               </a>
+              
+              <a
+                href="mailto:vikas.ambalazari@gmail.com?subject=Contact%20from%20Website&body=Hello%20Mentor,"
+                className="text-2xl hover:text-foreground hover:scale-110 transition-all duration-300"
+              >
+              <Mail className="w-6 h-6" />
+              </a>
+              
 
             </div>
 
