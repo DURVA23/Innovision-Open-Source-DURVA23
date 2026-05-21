@@ -74,7 +74,7 @@ export default function ContactPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     formRef.current.setAttribute("disabled", "true");
-
+  
     // Only clear form and show success after email is actually sent
     const formData = { email, message };
     sendEmail(formData);
@@ -82,7 +82,7 @@ export default function ContactPage() {
     // Clear form fields immediately for better UX
     setEmail("");
     setMessage("");
-    toast.success("Message sent successfully!", { type: "success" });
+    
     setTimeout(() => {
       formRef.current.removeAttribute("disabled");
     }, 2000);
@@ -219,13 +219,13 @@ export default function ContactPage() {
               </a>
 
               <a
-               href="https://github.com/ItsVikasA"
-               target="_blank"
-               rel="noopener noreferrer"
-                className="text-2xl hover:text-foreground hover:scale-110 transition-all duration-300"
+                href="https://github.com/ItsVikasA"
+                target="_blank"
+                rel="noopener noreferrer"
+                 className="text-2xl hover:text-foreground hover:scale-110 transition-all duration-300"
               >
               <FaGithub />
-              </a>
+              </a>        
 
               <a
                 href="https://www.linkedin.com/in/vikas028/"
@@ -244,9 +244,10 @@ export default function ContactPage() {
               <a
                 href="mailto:vikas.ambalazari@gmail.com?subject=Contact%20from%20Website&body=Hello%20Mentor,"
                 className="text-2xl hover:text-foreground hover:scale-110 transition-all duration-300"
-              >
+              > 
               <Mail className="w-6 h-6" />
-              </a>
+             </a>
+        
               
 
             </div>
